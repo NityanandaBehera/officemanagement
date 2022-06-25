@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Add an Employee</h1>
+      <hr />
+      <form action="/add" method="post">
+        {% csrf_token %}
+        <label for="first_name">First name</label><br />
+        <input
+          type="text"
+          id="first_name"
+          name="first_name"
+          value="{{first_name}}"
+        />
+        <label for="last_name">Last name</label><br />
+        <input
+          type="text"
+          id="last_name"
+          name="last_name"
+          value="{{last_name}}"
+        />
+        <label for="salary">Salary</label><br />
+        <input type="number" id="salary" name="salary" value="{{salary}}" />
+        <label for="dept">Department</label><br />
+        <input type="text" id="dept" name="dept" value="{{dept}}" />
+        <label for="text">Role</label><br />
+        <input type="role" id="role" name="role" value="{{role}}" />
+        <label for="bonus">Bonus</label><br />
+        <input type="number" id="bonus" name="bonus" value="{{bonus}}" />
+        <label for="number">Phone</label><br />
+        <input type="phone" id="phone" name="phone" value="{{phone}}" />
+        <hr />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
